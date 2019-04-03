@@ -5,26 +5,26 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import styles from './WrapperComponent.module.css';
+import styles from './CardComponent.module.css';
 
-class WrapperComponent extends Component {
+class CardComponent extends Component {
     constructor() {
         super();
-        this.state = { showContent: true };
+        this.state = { showInfo: true };
 
         this.toggleShowContent = this.toggleShowContent.bind(this);
     }
 
     // Toggles if the content in the card will be shown
     toggleShowContent() {
-        this.setState({ showContent: !this.state.showContent });
+        this.setState({ showInfo: !this.state.showInfo });
     }
 
     render() {
-        const showContent = this.state.showContent;
+        const showInfo = this.state.showInfo;
         let content;
 
-        if (showContent) {
+        if (showInfo) {
             content = this.props.children;
         } else {
             content = undefined;
@@ -42,4 +42,4 @@ class WrapperComponent extends Component {
     }
 }
 
-export default WrapperComponent;
+export default CardComponent;

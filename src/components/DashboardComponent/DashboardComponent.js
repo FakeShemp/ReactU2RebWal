@@ -5,8 +5,8 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
 import FormControl from 'react-bootstrap/FormControl'
-import WrapperComponent from './WrapperComponent';
-import UserComponent from './UserComponent';
+import CardComponent from '../CardComponent/CardComponent';
+import UserComponent from '../UserComponent/UserComponent';
 
 class DashboardComponent extends Component {
     constructor(props) {
@@ -32,7 +32,7 @@ class DashboardComponent extends Component {
 
     // Removes the last user in state.users
     removeUser() {
-        let users = this.state.users.slice(0, this.state.users.length -1);
+        let users = this.state.users.slice(0, this.state.users.length - 1);
         this.setState({ users: users });
     }
 
@@ -55,15 +55,15 @@ class DashboardComponent extends Component {
 
         return (
             <div style={{ display: "flex" }}>
-                <WrapperComponent>
+                <CardComponent>
                     {users}
                     <Button variant="primary" onClick={this.toggleColor} style={{ width: '100%' }}>Toggle Colors</Button>
-                </WrapperComponent>
-                <WrapperComponent>
+                </CardComponent>
+                <CardComponent>
                     <FormControl ref={this.userName} type="text" placeholder="New User..." />
                     <Button variant="success" onClick={this.addUser} style={{ width: '100%' }}>Add</Button>
                     <Button variant="danger" onClick={this.removeUser} style={{ width: '100%' }}>Remove</Button>
-                </WrapperComponent>
+                </CardComponent>
             </div>
         );
     }
