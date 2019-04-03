@@ -23,8 +23,7 @@ class DashboardComponent extends Component {
     // Adds a user from the form to the state.users list
     addUser() {
         if (this.userName.current.value) {
-            let users = this.state.users;
-            users.push(this.userName.current.value);
+            let users = this.state.users.concat([], this.userName.current.value);
             this.setState({ users: users });
 
             this.userName.current.value = '';
@@ -33,8 +32,7 @@ class DashboardComponent extends Component {
 
     // Removes the last user in state.users
     removeUser() {
-        let users = this.state.users;
-        users.pop();
+        let users = this.state.users.slice(0, this.state.users.length -1);
         this.setState({ users: users });
     }
 
