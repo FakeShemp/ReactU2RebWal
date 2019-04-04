@@ -1,3 +1,8 @@
+/**
+ * UserScreen renders the name of the selected user via props.match or 
+ * a screen telling the user no user is selected.
+ */
+
 import React, { Component } from 'react';
 import CardComponent from '../../components/CardComponent/CardComponent';
 

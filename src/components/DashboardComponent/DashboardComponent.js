@@ -1,5 +1,5 @@
 /**
- * Dashboard which handles the app's entry point and functionality
+ * Dashboard handles the app's user dashboard functionality
  */
 
 import React, { Component } from 'react';

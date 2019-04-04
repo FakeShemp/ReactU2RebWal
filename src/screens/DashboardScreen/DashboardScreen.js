@@ -1,3 +1,7 @@
+/**
+ * DashboardScreen displays the dashboard when routed  
+ */
+
 import React, { Component } from 'react';
 import DashboardComponent from '../../components/DashboardComponent/DashboardComponent'
 

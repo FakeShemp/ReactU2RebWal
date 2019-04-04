@@ -1,5 +1,5 @@
 /**
- * Wrapper creates a card and handles display toggling of content
+ * Card creates a card and handles display-toggling of info content
  */
 
 import React, { Component } from 'react';
@@ -15,7 +15,7 @@ class CardComponent extends Component {
         this.toggleShowContent = this.toggleShowContent.bind(this);
     }
 
-    // Toggles if the content in the card will be shown
+    // Toggles if the info content in the card will be shown
     toggleShowContent = () => {
         this.setState({ showInfo: !this.state.showInfo });
     }

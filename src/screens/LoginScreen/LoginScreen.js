@@ -1,3 +1,7 @@
+/**
+ * LoginScreen renders the login screen
+ */
+
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
 import FormControl from 'react-bootstrap/FormControl'
@@ -8,6 +12,7 @@ class LoginScreen extends Component {
         title: 'Login',
     };
 
+    // Navigates to dashboard via the history prop
     historyNav = () => {
         this.props.history.push("/dashboard")
     }
