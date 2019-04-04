@@ -4,10 +4,16 @@
 
 import React from 'react';
 import Alert from 'react-bootstrap/Alert'
+import { LinkContainer } from 'react-router-bootstrap'
 
 function UserComponent(props) {
+  let link;
+  link = "/user/" + props.user;
+
   return (
-    <Alert variant="dark" style={{ color: props.color }}>{props.user}</Alert>
+    <LinkContainer to={link} style={{ color: props.color }}>
+      <Alert variant="dark">{props.user}</Alert>
+    </LinkContainer>
   );
 }
 

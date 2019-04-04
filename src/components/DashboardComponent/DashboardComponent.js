@@ -21,7 +21,7 @@ class DashboardComponent extends Component {
     }
 
     // Adds a user from the form to the state.users list
-    addUser() {
+    addUser = () => {
         if (this.userName.current.value) {
             let users = this.state.users.concat([], this.userName.current.value);
             this.setState({ users: users });
@@ -31,13 +31,13 @@ class DashboardComponent extends Component {
     }
 
     // Removes the last user in state.users
-    removeUser() {
+    removeUser = () => {
         let users = this.state.users.slice(0, this.state.users.length - 1);
         this.setState({ users: users });
     }
 
     // Toggles the color in the state between green and red
-    toggleColor() {
+    toggleColor = () => {
         if (this.state.color === "red") {
             this.setState({ color: "green" })
         } else {
@@ -54,7 +54,7 @@ class DashboardComponent extends Component {
         });
 
         return (
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
                 <CardComponent>
                     {users}
                     <Button variant="primary" onClick={this.toggleColor} style={{ width: '100%' }}>Toggle Colors</Button>

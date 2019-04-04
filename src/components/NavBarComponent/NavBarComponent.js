@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { LinkContainer } from 'react-router-bootstrap'
 
 class NavBarComponent extends Component {
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <Navbar>
-                <Nav.Link href="#login">Login</Nav.Link>
-                <Nav.Link href="#dashboard">Dashboard</Nav.Link>
-                <Nav.Link href="#user">User</Nav.Link>
+                <LinkContainer exact to="/login">
+                    <Nav.Link>Login</Nav.Link>
+                </LinkContainer>
+                <LinkContainer exact to="/dashboard">
+                    <Nav.Link>Dashboard</Nav.Link>
+                </LinkContainer>
+                <LinkContainer exact to="/user">
+                    <Nav.Link>User</Nav.Link>
+                </LinkContainer>
             </Navbar>
         )
     }
