@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import styles from './CardComponent.module.css';
+import PropTypes from 'prop-types';
 
 class CardComponent extends Component {
     constructor() {
@@ -50,5 +51,9 @@ class CardComponent extends Component {
         );
     }
 }
+
+CardComponent.propTypes = {
+    info: PropTypes.string
+};
 
 export default CardComponent;
